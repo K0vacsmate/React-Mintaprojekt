@@ -1,42 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import InputForm from './Form';
 import Subject from './Subject';
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { subjects: [] };
+function App() {
+    const [subjects, setSubjects] = useState([]);
+
+    function AddSubject(subject) {
+        setSubjects([...subjects, subject])
     }
 
-    AddSubject(subject) {
-        this.setState({ subjects: this.state.subjects.concat(subject) });
-        this.state.subjects.map(subject => console.log(subject.name, subject.credit));
-        this.SubjectList();
-    }
+    subjects.map(subject => console.log(subject.name, subject.credit));
 
-    SubjectList() {
-        if (!this.state.subjects) {
-            return;
-        }
-        else {
-            const sl = this.state.subjects.map(subject => <li><Subject name={subject.name} credit={subject.credit} /></li>)
-            return sl
-        }
-
-    }
-
-
-    render() {
-        return (
-            <div>
-                <InputForm AddSubject={this.AddSubject.bind(this)} />
-                <ul>
-                    {this.sl}
-                </ul>
-            </div>
-
-        )
-    }
+    return (
+        <div>
+            <InputForm AddSubject={AddSubject.bind(this)} />
+        </div>
+    )
 }
 
 export default App;
