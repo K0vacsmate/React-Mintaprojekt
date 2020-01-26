@@ -9,11 +9,17 @@ function App() {
         setSubjects([...subjects, subject])
     }
 
-    subjects.map(subject => console.log(subject.name, subject.credit));
+    const sublist = subjects.map(subject => <Subject name={subject.name} credit={subject.credit} />);
 
     return (
         <div>
             <InputForm AddSubject={AddSubject.bind(this)} />
+            <div className="ui grid">
+                <div classname="four wide column">
+                    {sublist}
+                </div>
+            </div>
+
         </div>
     )
 }

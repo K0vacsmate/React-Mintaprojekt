@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Subject from './Subject';
 
 function Inputform(props) {
     const [name, setName] = useState('');
