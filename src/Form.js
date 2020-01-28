@@ -34,7 +34,8 @@ function Inputform(props) {
         if (isValidName && isValidCredit) {
             props.AddSubject({
                 name: name,
-                credit: credit
+                credit: credit,
+                mark: 1
             });
             setName('');
             setCredit('');

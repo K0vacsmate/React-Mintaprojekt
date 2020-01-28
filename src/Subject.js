@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 
 function Subject(props) {
     const name = props.name;
-    const credit = props.credit
-    const [mark, setMark] = useState(1);
+    const credit = props.credit;
+    var [mark, setMark] = useState(props.mark);
+
     function minusMark() {
         if (mark > 1) {
             setMark(mark - 1);
@@ -33,7 +34,7 @@ function Subject(props) {
                 {mark}
             </h3>
             <button className="medium ui button" onClick={minusMark}>-</button>
-            <button className="" ></button>
+            <button className="small ui button" >:</button>
         </div>
     )
 }
