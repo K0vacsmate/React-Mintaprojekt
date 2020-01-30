@@ -5,6 +5,7 @@ function Inputform(props) {
     const [credit, setCredit] = useState('');
     const [isValidName, setIsValidName] = useState(true);
     const [isValidCredit, setIsValidCredit] = useState(true);
+    const [subjectId, setSubjectId] = useState(1);
 
 
     function validateName() {
@@ -35,10 +36,12 @@ function Inputform(props) {
             props.AddSubject({
                 name: name,
                 credit: Number(credit),
-                mark: Number(1)
+                mark: Number(1),
+                id: subjectId
             });
             setName('');
             setCredit('');
+            setSubjectId(subjectId + 1);
         }
         else {
             return;

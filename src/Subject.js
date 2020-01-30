@@ -8,6 +8,7 @@ function Subject(props) {
     function minusMark() {
         if (mark > 1) {
             setMark(mark - 1);
+            props.ModifySubject(props.id, "-");
         }
         else {
             return;
@@ -17,6 +18,7 @@ function Subject(props) {
     function plusMark() {
         if (mark < 5) {
             setMark(mark + 1);
+            props.ModifySubject(props.id, "+");
         }
         else {
             return;
@@ -25,7 +27,7 @@ function Subject(props) {
     }
 
     return (
-        <div className="ui container">
+        <div key={props.id} className="ui container">
             <h2 className="ui header">
                 {name}
             </h2>
