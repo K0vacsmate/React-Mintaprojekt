@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles.css';
 
 function Inputform(props) {
     const [name, setName] = useState('');
@@ -6,6 +7,7 @@ function Inputform(props) {
     const [isValidName, setIsValidName] = useState(true);
     const [isValidCredit, setIsValidCredit] = useState(true);
     const [subjectId, setSubjectId] = useState(1);
+
 
 
     function validateName() {
@@ -51,10 +53,11 @@ function Inputform(props) {
 
 
     return (
-        <form className="ui form" onSubmit={handleSubmit}>
-            <div className="three fields">
-                <div className="field">
+        <div className="formStyle">
+            <form className="form" onSubmit={handleSubmit}>
+                <div>
                     <input
+                        className="nameInput"
                         type="text"
                         placeholder="Név"
                         value={name}
@@ -63,8 +66,9 @@ function Inputform(props) {
                         Nem megfelelő formátum
                         </div>
                 </div>
-                <div className="field">
+                <div >
                     <input
+                        className="creditInput"
                         type="text"
                         placeholder="Kredit"
                         value={credit}
@@ -73,12 +77,13 @@ function Inputform(props) {
                         Nem megfelelő formátum
                         </div>
                 </div>
-                <div className="field">
-                    <input className="medium ui button" type="submit" value="+"></input>
-                </div>
-            </div>
 
-        </form>
+                <div>
+                    <input type="submit" value="+"></input>
+                </div>
+
+            </form>
+        </div>
     )
 }
 

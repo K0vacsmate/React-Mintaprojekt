@@ -1,0 +1,52 @@
+.body {
+    margin: 5% 10% 0% 10%;
+}
+
+.form {
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.formStyle{
+    background-color: #f5f5f5f5;
+    margin: 10px 10px 10px 0px;
+}
+
+.nameInput { 
+    width: 90%;
+}
+
+.creditInput {
+    width: 30%;
+}
+
+.avgText{
+    font-size: medium;
+    margin-left: 10px;
+}
+
+.listItem{ 
+     list-style-type: none;
+     float: left;
+     padding: 0px 40px 0px 0px;
+}
+
+.subject{
+    padding: 10px 0px 10px 0px;
+    background-color: #f5f5f5;
+    width: 80px;
+    text-align: center;
+}
+
+.button {
+    width: 50px;
+}
+
+.subjectName{ 
+    font-size: medium;
+}
+
+.subjectMark{ 
+    margin: 2px;
+}

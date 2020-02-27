@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import InputForm from './Form';
 import Subject from './Subject';
+import './styles.css';
 
 function App() {
     const [subjects, setSubjects] = useState([]);
@@ -46,7 +47,7 @@ function App() {
     }, [subjects])
 
     const sublist = subjects.map(subject =>
-        <li key={subject.id}><Subject
+        <li className="listItem" key={subject.id}><Subject
             name={subject.name}
             credit={subject.credit}
             mark={subject.mark}
@@ -55,19 +56,17 @@ function App() {
         </li>);
 
     return (
-        <div>
+        <div className="body">
             <InputForm AddSubject={AddSubject.bind(this)} />
-            <div className="ui container grid">
-                <h1>Átlag: {avg}</h1>
-                <div className="ui grid">
-                    <div className="four wide column">
-                        {sublist}
-                    </div>
-                </div>
+            <div >
+                <h1 className="avgText">Átlag: {avg}</h1>
+                <ul>
+                    {sublist}
+                </ul>
             </div>
 
 
-        </div>
+        </div >
     )
 }
 

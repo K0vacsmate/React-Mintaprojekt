@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles.css';
 
 function Subject(props) {
     const name = props.name;
@@ -27,16 +28,15 @@ function Subject(props) {
     }
 
     return (
-        <div key={props.id} className="ui container">
-            <h2 className="ui header">
+        <div className="subject" key={props.id} >
+            <p className="subjectName">
                 {name}
-            </h2>
-            <button className="medium ui button" onClick={plusMark}>+</button>
-            <h3>
+            </p>
+            <button className="button" onClick={plusMark}>+</button>
+            <p className="subjectMark">
                 {mark}
-            </h3>
-            <button className="medium ui button" onClick={minusMark}>-</button>
-            <button className="small ui button" >:</button>
+            </p>
+            <button className="button" onClick={minusMark}>-</button>
         </div>
     )
 }
