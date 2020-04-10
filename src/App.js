@@ -57,6 +57,7 @@ function App() {
 
     return (
         <div className="body">
+            <h1>Átlagszámító</h1>
             <InputForm AddSubject={AddSubject.bind(this)} />
             <div >
                 <h1 className="avgText">Átlag: {avg}</h1>

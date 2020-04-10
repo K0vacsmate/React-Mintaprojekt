@@ -66,7 +66,7 @@ function Inputform(props) {
                         Nem megfelelő formátum
                         </div>
                 </div>
-                <div >
+                <div>
                     <input
                         className="creditInput"
                         type="text"
@@ -79,7 +79,7 @@ function Inputform(props) {
                 </div>
 
                 <div>
-                    <input type="submit" value="+"></input>
+                    <input className="submitButton" type="submit" value="+"></input>
                 </div>
 
             </form>
